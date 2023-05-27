@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block content %}
+<br> 
+<center><h2>CONTROL TO MICROCONTROLLER</h2></center>
+
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 89%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+} 
+    </style>
+    </head>
+    <body>
+
+    <table class="striped centered">
+    <thead>
+      <tr>
+        <th>SL.NO</th>
+        <th>LED 1</th>
+        <th>LED 2</th>
+        <th>Date and Time</th>
+      </tr>
+    </thead>
+
+      <tbody>
+        {% for object in object_list %}
+        <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{object.led_1}} </td>
+        <td>{{object.led_2}}</td>
+        <td>{{object.doc}}</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    
+    <div class="pagination">
+        <span class="step-links">
+          {% if page_obj.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ object_list.previous_page_number }}">previous</a>
+          {% endif %}
+
+          <span class="current">
+            Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+          </span>
+
+          {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">next</a>
+          <a href="?page={{ page_obj.num_pages }}">last &raquo;</a>
+          {% endif %}
+        </span>
+      </div>
+
+ {% endblock content %}

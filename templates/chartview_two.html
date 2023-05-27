@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% block title_here %}
+<title>Chart view</title>
+{% endblock title_here %} {% block content %}
+<style>
+  .row {
+    padding-left: 80px;
+  }
+</style>
+<div class="row">
+  <div class="column">
+    <div id="graph_container" style="width: 80%">
+      <canvas
+        id="speed-chart"
+        style="min-height: 30%"
+        data-url="{% url 'plot_graph' %}"
+      ></canvas>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+    $(function plot_data() {
+      var $SpeedChart = $("#speed-chart");
+      $.ajax({
+        url: $SpeedChart.data("url"),
+
+        success: function (data) {
+          console.log("inside ajax"), console.log(data);
+          var ctx = $SpeedChart[0].getContext("2d");
+
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: data.date,
+              datasets: [
+                {
+                  label: "Bulb 2 Characteristics",
+                  backgroundColor: "blue",
+                  data: data.led2,
+                  responsive: false,
+                  fill: false,
+                },
+              ],
+            },
+            options: {
+              animation: true,
+              fill: true,
+              responsive: true,
+              legend: {
+                position: "top",
+              },
+              title: {
+                display: true,
+                text: "IOT Chart",
+              },
+            },
+          });
+          setTimeout(() => {
+            plot_data();
+          }, 8000);
+          // setInterval(() => {
+          //     plot_data();
+          // }, 8000);
+        },
+        error: function (e) {
+          console.log(e);
+          plot_data();
+        },
+      });
+    });
+  </script>
+</div>
+<div class="s12"></div>
+{% endblock content %}
