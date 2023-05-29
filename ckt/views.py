@@ -4,6 +4,7 @@ from django.views.generic.list import ListView
 from django.http import JsonResponse
 from .models import CircuitModel, CircuitStatusModel, ApiModel
 from .forms import CircuitForm
+from django.contrib.auth.forms import UserCreationForm
 
 
 class CircuitControlView(ListView):
@@ -84,5 +85,23 @@ def plot_graph(request):
 def chartview(request):
     return render(request, "chartview.html")
 
+
 def graph_two(request):
-    return render(request,"chartview_two.html")
+    return render(request, "chartview_two.html")
+
+
+def usercreation(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("login")
+    else:
+        form = UserCreationForm()
+
+    content = {"form": form}
+    return render(request, "login.html", content)
+
+
+def aboutpage(request):
+    return render(request, "About_us.html")

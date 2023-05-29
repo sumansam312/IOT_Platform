@@ -1,0 +1,202 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<head>
+  <style>
+    /*Import*/
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Pacifico);
+    @import url(https://fonts.googleapis.com/css?family=Gudea);
+    @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+    /* Icons FontAwesome */
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css);
+    /*Barra*/
+    *,
+    *:after,
+    *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0.3em;
+      background-color: #cbcbcb;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #212121;
+    }
+    /**menu responsive**/
+    .menu_btn {
+      background: #fff url(../img/menu.png) center center no-repeat;
+      display: block;
+      height: 42px;
+      width: 42px;
+      position: absolute;
+      top: 0;
+      right: 30px;
+    }
+
+    #menu {
+      height: 100%;
+      position: fixed;
+      background: #222;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 150px;
+      right: -240px;
+      z-index: 9999;
+    }
+
+    #menu ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: white;
+    }
+
+    #menu ul li {
+      height: 47px;
+      padding-left: 30px;
+      line-height: 47px;
+      border-bottom: 1px solid #848484;
+    }
+
+    #menu ul li.active {
+      background: #1e88e5;
+    }
+
+    #menu ul li:hover {
+      background: #1e88e5;
+    }
+
+    #menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      display: block;
+    }
+
+    .close {
+      display: block;
+      background: #373737 url(../img/cerrar.png) center center no-repeat;
+      height: 47px;
+      width: 47px;
+      position: absolute;
+      top: 0;
+      left: -47px;
+    }
+    body {
+      background: #e1e9ea;
+      font-family: "Lato", sans-serif;
+    }
+    img {
+      max-width: 50%;
+    }
+    a,
+    .azul {
+      color: #05a3de;
+    }
+    .quitar-float {
+      float: none;
+    }
+    .centro {
+      float: none;
+      margin-top: 100px;
+    }
+    .centro-vert {
+      vertical-align: top;
+    }
+    .espacio {
+      margin-right: 1em;
+    }
+    .nombre {
+      font-family: "Pacifico", cursive;
+      font-size: 4em;
+      color: #0087d0;
+    }
+    .nombre-letra {
+      font-family: "Gudea", sans-serif;
+      color: #6f736e;
+    }
+    .mediano {
+      font-size: 1.2em;
+    }
+    .acerca {
+      font-family: "Gudea", sans-serif;
+    }
+    .nav-color {
+      background-color: #b8beb6;
+    }
+    .padding-largo {
+      padding: 5px 10px;
+    }
+    .inline-block {
+      float: none;
+      display: inline-block;
+      margin-right: -4px;
+    }
+    .no-list {
+      margin: 0px;
+      padding: 0px;
+    }
+    .no-list li {
+      list-style-type: none;
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <title>Inicio | Bienvenido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+</head>
+<div class="col-md-4 center-block centro text-center">
+  <img
+    class="img-circle"
+    src="https://avatars3.githubusercontent.com/u/9051797?v=3&s=460"
+  />
+  <h1 class="acerca">Hi I'am</h1>
+  <h1 class="nombre">Sumanth</h1>
+  <h2 class="acerca">Designer | Web Developer & Student at MVJCE</h2>
+  <h3 class="acerca">I Do Interesting Things on Web<h3>
+</div>
+
+<div class="col-md-4 center-block centro text-center">
+  <img
+    class="img-circle"
+    src="https://avatars3.githubusercontent.com/u/9051797?v=3&s=460"
+  />
+  <h1 class="acerca">Hi I'am</h1>
+  <h1 class="nombre">Sumanth</h1>
+  <h2 class="acerca">Designer | Web Developer & Student at MVJCE</h2>
+  <h3 class="acerca">I Do Interesting Things on Web<h3>
+</div>
+
+<div class="col-md-4 center-block centro text-center">
+  <img
+    class="img-circle"
+    src="https://avatars3.githubusercontent.com/u/9051797?v=3&s=460"
+  />
+  <h1 class="acerca">Hi I'am</h1>
+  <h1 class="nombre">Sumanth</h1>
+  <h2 class="acerca">Designer | Web Developer & Student at MVJCE</h2>
+  <h3 class="acerca">I Do Interesting Things on Web<h3>
+</div>
+
+<div class="col-md-4 center-block centro text-center">
+  <img
+    class="img-circle"
+    src="https://avatars3.githubusercontent.com/u/9051797?v=3&s=460"
+  />
+  <h1 class="acerca">Hi I' am</h1>
+  <h1 class="nombre">Sumanth</h1>
+  <h2 class="acerca">Designer | Web Developer & Student at MVJCE</h2>
+  <h3 class="acerca">I Do Interesting Things on Web<h3>
+</div>
+
+
+{% endblock content %}

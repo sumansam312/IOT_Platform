@@ -27,8 +27,8 @@
     .switch {
       display: block;
       background-color: black;
-      width: 100  px;
-      height: 195px;
+      width: 130px;
+      height: 190px;
       box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black,
         inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c,
         inset 0 0 2px 22px black;
@@ -230,8 +230,8 @@
     .switch {
       display: block;
       background-color: black;
-      width: 150px;
-      height: 195px;
+      width: 135px;
+      height: 180px;
       box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black,
         inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c,
         inset 0 0 2px 22px black;
@@ -402,6 +402,12 @@
         opacity: 0;
       }
     }
+    .switch_button {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
 
   </style>
 
@@ -417,7 +423,9 @@
   </label><h3>Switch 2</h3></div></div>
 </div>
 <br>
-  <input type="submit" value="Submit" style="background-color: #4CAF50; 
+
+<div class="switch_button">
+  <input type="submit" value="Submit" style="background-color: goldenrod; 
   border-radius: 12px;
   color: white;
   padding: 15px 32px;
@@ -425,6 +433,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;"/>
+</div>
+ 
 </form>
 
 {% endblock content %}

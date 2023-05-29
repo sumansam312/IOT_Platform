@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from web.views import home_page
+from django.contrib.auth.views import LoginView, LogoutView
+
 from ckt.views import (
     CircuitControlView,
     CircuitStatusView,
@@ -10,7 +12,8 @@ from ckt.views import (
     plot_graph,
     chartview,
     graph_two,
-    
+    usercreation,
+    aboutpage,
 )
 
 urlpatterns = [
@@ -24,5 +27,8 @@ urlpatterns = [
     path("graph_plot/", plot_graph, name="plot_graph"),
     path("chartview/", chartview, name="viewchart"),
     path("graph_two/", graph_two, name="chartview_two"),
-    
+    path("register/", usercreation, name="register"),
+    path("login/", LoginView.as_view(template_name="Login.html"), name="login"),
+    path("logout/", LogoutView.as_view(template_name="logout.html"), name="logout"),
+    path("aboutpage/", aboutpage, name="about_page"),
 ]
