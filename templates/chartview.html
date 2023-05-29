@@ -1,9 +1,14 @@
-{% extends 'base.html' %} {% block title_here %}
-<title>Chart view</title>
-{% endblock title_here %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% block title %}
+<title>Graph 1</title>
+{% endblock title %}
 <style>
   .row {
     padding-left: 80px;
+  }
+
+  .spacer {
+    background-color: white;
+    height: 40vh;
   }
 </style>
 <div class="row">
@@ -71,5 +76,5 @@
     });
   </script>
 </div>
-<div class="s12"></div>
+<div class="spacer"></div>
 {% endblock content %}

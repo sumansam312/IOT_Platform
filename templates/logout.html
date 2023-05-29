@@ -1,5 +1,17 @@
-{% extends 'base.html' %} {% block content %}
-
-<h1>Log Out</h1>
-
+{% extends 'base.html' %} {% block content %} {% block title %}
+<title>Logout</title>
+{% endblock title %}
+<style>
+  .spacer {
+    background-color: white;
+    height: 80vh;
+    margin-top: 40vh;
+  }
+</style>
+<div class="spacer">
+  <center><h1>You have been successfully logged Out.</h1></center>
+  <center>
+    <h3>"Thank you for using IOT Platform. We hope to see you again soon!"</h3>
+  </center>
+</div>
 {% endblock content %}

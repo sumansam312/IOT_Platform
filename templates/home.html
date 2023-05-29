@@ -1,30 +1,42 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 {% block title %}
-<title>BLDC MOTOR | Registration</title>
+<title>HOME PAGE</title>
 {% endblock title %}
-
 <style>
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  /* font: 400 15px/1.8 "Lato", sans-serif; */
   color: #777;
 }
 
 .bgimg-1 {
   position: relative;
-  /* opacity: 0.65; */  
+  /* opacity: 0.65; */    
   background-position: center;
   background-size: cover;
 
 }
 .bgimg-1 {
-  background-image: url("/static/images/blockdiagram.png");
-  margin-top: 60px;
-  min-height: 70%;
+  background-image: url("/static/images/unsplash.jpg");
+  /* margin-top: 60px; */
+  min-height: 100%;
 }
 
+.bgimg-2 {
+  position: relative;
+  /* opacity: 0.65;     */
+  background-position: center;
+  background-size: cover;
+
+}
+
+.bgimg-2 {
+  background-image: url("/static/images/unsplash_laptop.jpg");
+  /* margin-top: 60px; */
+  min-height: 90%;
+}
 
 h3 {
   letter-spacing: 5px;
@@ -37,24 +49,18 @@ h3 {
 <body>
 
 <div class="bgimg-1">
-  
   <div class="caption">
   </div>
 </div>
-<!-- <div class="row">
-      <div class="col s12 l12">
-        <h2 class="center" style="font-family: 'Akronim'">Block Diagram</h2>
-        <img
-          src="{% static 'images/blockdiagram.png' %}"
-          class="responsive-img"
-          alt="Block-diagram"
-        />
-      </div>
-    </div> -->
 
 <div style="color:black;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <h3 style="text-align:center;">Internet of Things</h3>
   <p><b>Abstract:</b> The rapid growth of the Internet of Things (IoT) has revolutionized various industries, enabling the connection of numerous smart devices and facilitating the exchange of vast amounts of data. To harness the full potential of IoT, there is a growing need for robust and scalable IoT platforms that can seamlessly integrate heterogeneous devices, efficiently manage data, and enable intelligent decision-making.The platform supports seamless device integration by offering standardized protocols and APIs for communication between IoT devices and the platform. It accommodates various connectivity options, including Wi-Fi, Bluetooth, Zigbee, and cellular networks, ensuring compatibility with a wide range of devices. Moreover, it provides robust security mechanisms to authenticate and authorize devices, safeguarding against unauthorized access.</p>
 </div>
 
+<div class="bgimg-2">
+  
+  <div class="caption">
+  </div>
+</div>
 {% endblock content %}

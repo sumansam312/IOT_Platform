@@ -1,5 +1,11 @@
-{% extends 'base.html' %} {% block content %}
-
+{% load static %} {% block title %}
+<title>Login Page</title>
+{% endblock title %}
+<link
+  rel="shortcut icon"
+  href="{% static 'favicon.png' %}"
+  type="image/x-icon"
+/>
 <style>
   /* Import Google font - Poppins */
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -10,9 +16,10 @@
     font-family: "Poppins", sans-serif;
   }
   body {
-    min-height: 100vh;
-    width: 100%;
-    background: #009579;
+    min-height: 50vh;
+    width: 10%;
+    height: 40vh;
+    background-image: url("/static/images/unsplash_bread.jpg");
   }
   .container {
     position: absolute;
@@ -104,7 +111,7 @@
         name="password"
         placeholder="Enter your password"
       />
-      <a href="#">Forgot password?</a>
+
       <input type="submit" class="button" value="Login" />
     </form>
     <div class="signup">
@@ -135,5 +142,3 @@
     </div>
   </div>
 </div>
-
-{% endblock content %}
