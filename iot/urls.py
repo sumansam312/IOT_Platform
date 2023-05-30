@@ -14,6 +14,7 @@ from ckt.views import (
     graph_two,
     usercreation,
     aboutpage,
+    privacy,
 )
 
 urlpatterns = [
@@ -31,4 +32,5 @@ urlpatterns = [
     path("login/", LoginView.as_view(template_name="Login.html"), name="login"),
     path("logout/", LogoutView.as_view(template_name="logout.html"), name="logout"),
     path("aboutpage/", aboutpage, name="about_page"),
+    path("privacy/", privacy, name="privacy_policy"),
 ]

@@ -105,3 +105,7 @@ def usercreation(request):
 
 def aboutpage(request):
     return render(request, "About_us.html")
+
+
+def privacy(request):
+    return render(request, "Privacy_policy.html")

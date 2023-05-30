@@ -5,7 +5,7 @@
 <title>Control Panel</title>
 {% endblock title %}
 <center><h2>SWITCH PANEL</h2></center>
-
+<br><br>
 <form action="" method="post">
   {% csrf_token %}
 <div class="row">
@@ -203,6 +203,10 @@
         opacity: 0;
       }
     }
+    .spacer {
+    background-color: white;
+    height: 40vh;
+  }
   </style>
 
   <label class="switch">
@@ -439,6 +443,7 @@
   display: inline-block;
   font-size: 16px;"/>
 </div>
+<div class="spacer"></div>
  
 </form>
 
