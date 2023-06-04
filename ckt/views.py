@@ -19,7 +19,6 @@ class CircuitStatusView(ListView):
     paginate_by = 20
 
 
-@login_required
 def write_api_view(request):
     write_api = ApiModel.objects.last().write_api
     api_key = request.GET.get("api", "")
