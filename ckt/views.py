@@ -108,3 +108,7 @@ def aboutpage(request):
 
 def privacy(request):
     return render(request, "Privacy_policy.html")
+
+
+def Register(request):
+    return render(request, "Register.html")
