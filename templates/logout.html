@@ -1,17 +1,23 @@
-{% extends 'base.html' %} {% block content %} {% block title %}
-<title>Logout</title>
-{% endblock title %}
-<style>
-  .spacer {
-    background-color: white;
-    height: 80vh;
-    margin-top: 40vh;
-  }
-</style>
-<div class="spacer">
-  <center><h1>You have been successfully logged Out.</h1></center>
-  <center>
-    <h3>"Thank you for using IOT Platform. We hope to see you again soon!"</h3>
-  </center>
-</div>
-{% endblock content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+  {% block title %}
+  <title>LOGOUT</title>
+  {% endblock title %}
+  <style>
+    .image {
+      align-items: center;
+      width: 30%;
+      height: 30%;
+    }
+  </style>
+  <br><br>  
+   <center><h1>You have been successfully logged Out.</h1></center>
+   <center>
+     <h3>
+       "Thank you for using IOT Platform. We hope to see you again soon!"
+     </h3>
+   </center>
+   <br><br>
+  <div class="image"><img src="{% static 'images\Thankyou.jpg' %}" /></div>
+  {% endblock content %}
+</head>
