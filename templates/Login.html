@@ -26,10 +26,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 430px;
+    max-width: 550px;
     width: 100%;
     background: #fff;
-    border-radius: 7px;
+    border-radius: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
   .container .registration {
@@ -126,12 +126,15 @@
     <form action="/register/" method="post">
       {% csrf_token %}
       <input type="text" name="username" placeholder="Enter your Username" />
+      <div>150 characters or fewer. Letters, digits and @/./+/-/_ only</div>
       <input type="password" name="password1" placeholder="Create a password" />
+      <div>Your password can’t be too similar to your others.</div>
       <input
         type="password"
         name="password2"
         placeholder="Confirm your password"
       />
+      <div>Enter the same password as before.</div>
       <input type="submit" class="button" value="Signup" />
     </form>
     <div class="signup">
