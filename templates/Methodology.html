@@ -1,14 +1,34 @@
 {% extends 'base.html' %} {% block content %} {% block title %}
 <title>Methodology</title>
 {% endblock title %} {% load static %}
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
 <style>
   .intro {
     margin: 30px;
   }
+
+  .btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+p {
+  font-size: 16px;
+}
 </style>
 <div class="intro">
   <center><h1>Introduction</h1></center>
   <div>
+    <p>
     The methodology section outlines the approach and steps involved in the
     development and implementation of our IoT (Internet of Things) platform.
     This platform aims to address the growing need for efficient data
@@ -17,7 +37,7 @@
     seamless connectivity, data management, and real-time insights, empowering
     businesses and individuals to make informed decisions and drive innovation.
     In this section, we will discuss the research, design, development, and
-    deployment methodologies employed to bring this IoT platform to fruition.
+    deployment methodologies employed to bring this IoT platform to fruition.</p>
   </div>
   <div style="padding-left: 100px">
     <img src="{% static 'images\IOT.webp' %}" width="900" height="400" />
@@ -30,7 +50,7 @@
   <br />
   <center><h1>Block Diagram</h1></center>
   <div><img src="{% static 'images\diagram.png' %}" /></div></div>
-  <div><p>The IoT devices in this case are the two bulbs that can be turned on and off remotely. These bulbs are equipped with IoT capabilities, such as Wi-Fi connectivity and built-in controllers, which allow them to communicate with other components of the IoT system</p>
+  <div style="margin: 30px;"><p>The IoT devices in this case are the two bulbs that can be turned on and off remotely. These bulbs are equipped with IoT capabilities, such as Wi-Fi connectivity and built-in controllers, which allow them to communicate with other components of the IoT system</p>
     <p></p>An IoT gateway acts as a bridge between the IoT devices (bulbs) and the IoT platform. It facilitates communication by collecting data from the bulbs and relaying it to the platform. The gateway may perform protocol translation, data preprocessing, and local storage.</p>
     <p>The IoT platform serves as the central software infrastructure for managing and controlling the IoT devices. It receives data from the IoT gateway, processes it, and provides the necessary functionality to control the bulbs. This includes user interfaces, rule engines, and APIs to interact with the bulbs.</p> 
     <p></p>The IoT cloud represents the cloud-based infrastructure that hosts the IoT platform and provides the necessary computing resources and services. It enables scalability, data storage, data processing, and remote access to the platform from anywhere </p>
@@ -40,8 +60,8 @@
   <br />
   <center><h1>Platform Design and Architecture</h1></center>
   <div>
-    <b>System Components:</b>
-    <p>
+    <b style="margin: 30px;">System Components:</b>
+    <p style="margin: 30px;">
       Define the various components that make up the IoT platform, including
       devices/sensors, gateways, network infrastructure, cloud services, and
       user interfaces. Identify their roles, interactions, and dependencies
@@ -51,65 +71,66 @@
       protocol translation, data preprocessing, and local data storage. They may
       also provide edge computing capabilities, allowing for real-time
       processing and filtering of data at the network edge.
-      <div><img src="{% static 'images\Device.jpeg' %}" /></div>
+      <br><br><br>
+      <span class="center"><img src="{% static 'images\Device.jpeg'%}" /></span>
     </p>
 
-    <b>Communication Protocols:</b>
-    <p>
+    <b  style="margin: 30px;">Communication Protocols:</b>
+    <p  style="margin: 30px;">
       Determine the communication protocols used for device-to-device and
       device-to-platform communication. Common protocols include MQTT, CoAP, and
       HTTP. Consider factors such as reliability, scalability, security, and
       bandwidth efficiency.
     </p>
 
-    <b>Data Storage and Management:</b>
-    <p>
+    <b style="margin: 30px;">Data Storage and Management:</b>
+    <p style="margin: 30px;">
       Design the data storage architecture that can handle large volumes of IoT
       data. Consider the choice of databases (relational, NoSQL, time-series),
       data models, indexing strategies, and data partitioning. Ensure data
       security, backup, and recovery mechanisms.
     </p>
 
-    <b>Data Processing and Analytics:</b>
-    <p>
+    <b style="margin: 30px;">Data Processing and Analytics:</b>
+    <p style="margin: 30px;">
       Determine the processing and analytics capabilities of the platform. This
       may involve real-time data stream processing, batch processing, machine
       learning algorithms, and statistical analysis. Consider the computational
       requirements, scalability, and latency constraints.
     </p>
 
-    <b>Security and Privacy:</b>
-    <p>
+    <b style="margin: 30px;">Security and Privacy:</b>
+    <p style="margin: 30px;">
       Incorporate robust security measures to protect the IoT platform. This
       includes authentication, authorization, encryption, secure communication
       channels, and data anonymization. Ensure compliance with privacy
       regulations and best practices.
     </p>
 
-    <b>User Interfaces and Experience:</b>
-    <p>
+    <b style="margin: 30px;">User Interfaces and Experience:</b>
+    <p style="margin: 30px;">
       Design intuitive and user-friendly interfaces for users to interact with
       the IoT platform. Consider the visualizations, dashboards, and control
       mechanisms to present data and enable user actions. Ensure cross-platform
       compatibility and responsiveness.
     </p>
 
-    <b>Integration and Interoperability:</b>
-    <p>
+    <b style="margin: 30px;">Integration and Interoperability:</b>
+    <p style="margin: 30px;">
       Consider integration with existing systems and services. Define APIs and
       protocols to enable interoperability with other platforms and
       applications. This allows seamless data exchange and collaboration with
       third-party systems.
     </p>
 
-    Remember, these Practical considerations serve as a starting point for
+    <p style="margin: 30px;">Remember, these Practical considerations serve as a starting point for
     designing an IoT platform. The actual implementation and architecture may
     vary based on specific project requirements, technology stack, and available
-    resources.
+    resources.</p>
   </div>
   <br />
   <center><h1>Device Connectivity</h1></center>
-  <div>
+  <div style="margin: 30px;">
     Determine the connectivity options for IoT devices to connect to the
     platform. This may include Wi-Fi, cellular networks (2G, 3G, 4G, or 5G),
     Bluetooth, Zigbee, LoRaWAN, or other wireless protocols. Consider factors
@@ -144,5 +165,12 @@
       eliminating the need for separate communication infrastructure.
     </p>
   </div>
+   <div class="center"> <center>
+    <h2>Download The Conference Paper of IOT Platform</h2>
+    <a href="{% static 'images\DS70_395.pdf' %}" download>
+      <button class="btn"><i class="fa fa-download"></i> Download</button>
+    </a>
+  </center></div>
 </div>
+<br>  
 {% endblock content %}
