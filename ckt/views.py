@@ -112,3 +112,7 @@ def privacy(request):
 
 def Register(request):
     return render(request, "Register.html")
+
+
+def Method(request):
+    return render(request, "Methodology.html")

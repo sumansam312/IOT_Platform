@@ -16,6 +16,7 @@ from ckt.views import (
     aboutpage,
     privacy,
     Register,
+    Method,
 )
 
 urlpatterns = [
@@ -35,4 +36,5 @@ urlpatterns = [
     path("aboutpage/", aboutpage, name="about_page"),
     path("privacy/", privacy, name="privacy_policy"),
     path("Register/", Register, name="Register_page"),
+    path("Method/", Method, name="Method_page"),
 ]
