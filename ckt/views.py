@@ -99,7 +99,7 @@ def usercreation(request):
         form = UserCreationForm()
 
     content = {"form": form}
-    return render(request, "login.html", content)
+    return render(request, "Login.html", content)
 
 
 def aboutpage(request):
