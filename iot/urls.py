@@ -17,6 +17,7 @@ from ckt.views import (
     privacy,
     Register,
     Method,
+    widgets,
 )
 
 urlpatterns = [
@@ -37,4 +38,5 @@ urlpatterns = [
     path("privacy/", privacy, name="privacy_policy"),
     path("Register/", Register, name="Register_page"),
     path("Method/", Method, name="Method_page"),
+    path("widgets/", widgets, name="widgets_page"),
 ]

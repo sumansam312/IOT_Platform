@@ -116,3 +116,7 @@ def Register(request):
 
 def Method(request):
     return render(request, "Methodology.html")
+
+
+def widgets(request):
+    return render(request, "Widgets.html")
